@@ -1,0 +1,168 @@
+/* ================================================================
+   DataReliQ Health Monitor — Interactive Walkthrough CSS
+   ================================================================ */
+
+/* Overlay */
+.wt-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 99990;
+    pointer-events: auto;
+}
+
+/* Highlight Ring */
+.wt-highlight {
+    position: absolute;
+    background-color: transparent;
+    border: 2px dashed rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+    z-index: 99991;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 0 9999px rgba(0, 0, 0, 0.6);
+    /* The box-shadow acts as the overlay around the highlight */
+}
+
+/* We hide the main overlay when highlighting using box-shadow to achieve the "cutout" effect */
+.wt-overlay {
+    display: none;
+}
+
+.wt-highlight {
+    display: block;
+}
+
+/* Target Elevation */
+.wt-target-elevated {
+    position: relative !important;
+    z-index: 99992 !important;
+    pointer-events: none !important;
+}
+
+/* Tooltip Container */
+.wt-tooltip {
+    position: absolute;
+    background-color: #1a6ce7;
+    /* Purplish blue from the reference */
+    color: #ffffff;
+    border-radius: 12px;
+    padding: 16px 20px;
+    z-index: 99995;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    font-family: 'Source Sans Pro', sans-serif;
+    transition: all 0.3s ease;
+    opacity: 1;
+}
+
+/* Tooltip Header */
+.wt-tooltip-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.wt-step-badge {
+    font-size: 0.75rem;
+    font-weight: 700;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 2px 8px;
+    border-radius: 12px;
+}
+
+.wt-tooltip-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+/* Tooltip Text */
+.wt-tooltip-text {
+    font-size: 0.95rem;
+    line-height: 1.4;
+    margin-bottom: 16px;
+}
+
+/* Tooltip Actions */
+.wt-tooltip-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.wt-btn-group {
+    display: flex;
+    gap: 8px;
+}
+
+/* Buttons */
+.wt-btn {
+    border: none;
+    border-radius: 20px;
+    padding: 6px 16px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: 'Source Sans Pro', sans-serif;
+    transition: all 0.15s ease;
+}
+
+.wt-btn-exit {
+    background-color: transparent;
+    color: rgba(255, 255, 255, 0.8);
+    padding: 6px 0;
+}
+
+.wt-btn-exit:hover {
+    color: #ffffff;
+}
+
+.wt-btn-prev {
+    background-color: transparent;
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.wt-btn-prev:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.wt-btn-next {
+    background-color: #ffffff;
+    color: #5d49db;
+}
+
+.wt-btn-next:hover {
+    background-color: #f1f5f9;
+}
+
+/* Header Trigger Button */
+.wt-trigger-btn {
+    padding: 8px 20px;
+    border-radius: 8px;
+    background-color: #1a6ce7;
+    color: white;
+    border: none;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.wt-trigger-btn:hover {
+    transform: scale(1.05);
+    background-color: #095bd0;
+}
+
+.wt-trigger-btn .material-symbols-rounded {
+    font-size: 18px;
+}
